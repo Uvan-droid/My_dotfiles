@@ -15,7 +15,6 @@ vim.g.mapleader = " "
 
 require('plugin')
 require('map')
-require('lsp')
 require('statusline')
 require('neotree')
 vim.g['onedark_termcolors'] = 256
