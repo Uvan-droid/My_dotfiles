@@ -1,5 +1,6 @@
 ## My dotfiles 
-![](/system.phg)
+
+![](system.phg)
 
 ### [Polybar](https://github.com/adi1090x/polybar-themes)
 ### Editor vim
