@@ -1,6 +1,6 @@
 ## My dotfiles 
 
-![system](/system.phg)
+![NEOVIM](system.png)
 
 ### [Polybar](https://github.com/adi1090x/polybar-themes)
 ### Editor vim
