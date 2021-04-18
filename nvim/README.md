@@ -1,7 +1,7 @@
 
 # My neovim config on lua
 
-![](//nvim.png/150x100)
+![NEOVIM](nvim.png)
 
 
 ## LSP [coc.nvim](https://github.com/neoclide/coc.nvim)
