@@ -9,6 +9,7 @@ return require('packer').startup(function()
  	 'glepnir/galaxyline.nvim',
     	  branch = 'main',
   	}
+	use 'sainnhe/gruvbox-material'
 	use 'neoclide/coc.nvim'
 	use 'glepnir/lspsaga.nvim'
 	use 'kabouzeid/nvim-lspinstall'
@@ -17,6 +18,7 @@ return require('packer').startup(function()
 	use 'liuchengxu/vista.vim'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'glepnir/dashboard-nvim'
+	use 'metakirby5/codi.vim'
 end)
 
 

@@ -67,6 +67,9 @@ vim.g.dashboard_preview_pipeline = 'lolcat'
 vim.g.dashboard_preview_file = 'logo.cat'
 vim.g.dashboard_preview_file_height = 9
 vim.g.dashboard_preview_file_width = 80
+
+vim.cmd(":Codi lua")
+
 -- require('lualine').setup{
 --	options = {
 --  		section_separators = {'', ''},
