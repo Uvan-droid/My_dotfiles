@@ -44,6 +44,8 @@ if [ -d "$HOME/Applications" ] ;
 	then PATH="$HOME/Applications:$PATH" 
 fi
 
+alias install="sudo pacman -S "
+
 alias vim="nvim" 
 alias em="/usr/bin/emacs -nw" 
 alias emacs="emacsclient -c -a 'emacs'"
