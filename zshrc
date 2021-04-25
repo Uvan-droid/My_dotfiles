@@ -5,7 +5,7 @@ export VISUAL="emacsclient -c -a emacs"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-pfetch
+afetch
 
 bindkey -v
 
