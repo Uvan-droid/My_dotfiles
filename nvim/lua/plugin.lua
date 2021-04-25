@@ -9,6 +9,7 @@ return require('packer').startup(function()
  	 'glepnir/galaxyline.nvim',
     	  branch = 'main',
   	}
+	use 'airblade/vim-gitgutter'
 	use 'sainnhe/gruvbox-material'
 	use 'neoclide/coc.nvim'
 	use 'glepnir/lspsaga.nvim'
