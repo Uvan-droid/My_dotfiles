@@ -17,6 +17,7 @@ require('plugin')
 require('map')
 require('statusline')
 require('neotree')
+require('lsp')
 vim.g['onedark_termcolors'] = 256
 
 vim.cmd [[colorscheme gruvbox]]
@@ -57,6 +58,7 @@ require'bufferline'.setup{
     separator_style = "thin",
   }
 }
+  
 
 vim.g.vista_icon_indent = {"╰─▸ ", "├─▸ "}
 vim.g.vista_default_executive = 'ctags'
