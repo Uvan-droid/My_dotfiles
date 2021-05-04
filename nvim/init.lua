@@ -17,10 +17,11 @@ require('plugin')
 require('map')
 require('statusline')
 require('neotree')
-require('lsp')
+--require('lsp')
+--require('telescope')
 vim.g['onedark_termcolors'] = 256
-
-vim.cmd [[colorscheme gruvbox]]
+vim.g['cursorword_highlight'] = true
+vim.cmd [[colorscheme  gruvbox]]
 -- Setup
 require('lspfuzzy').setup {}
 -- vim.g['fzf_preview_window'] = ' right: 50% ' , ' ctrl- / '
@@ -32,33 +33,11 @@ require'nvim-treesitter.configs'.setup {
     enable = true,              
     disable = { "c", "rust" },  
   },
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    disable = {"lua", "c", "ruby", "rust"},  -- optional, list of language that will be disabled
+  },
 }
-
-require'bufferline'.setup{
-  options = {
-    view = "multiwindow",
-    mappings = true,
-    buffer_close_icon= '',
-    modified_icon = '●',
-    number = "both",
-	number_style = "superscript", 
-	close_icon = '',
-    left_trunc_marker = '',
-    right_trunc_marker = '',
-    max_name_length = 18,
-    max_prefix_length = 15, -- prefix used when a buffer is deduplicated
-    tab_size = 18,
-    diagnostics = "nvim_lsp",
-    show_buffer_close_icons = true,
-    show_close_icon = true,
-    -- show_tab_indicators = true,
-    -- persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-    -- can also be a table containing 2 custom separators
-    -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin",
-  }
-}
-  
 
 vim.g.vista_icon_indent = {"╰─▸ ", "├─▸ "}
 vim.g.vista_default_executive = 'ctags'
@@ -70,13 +49,33 @@ vim.g.dashboard_preview_file = 'logo.cat'
 vim.g.dashboard_preview_file_height = 9
 vim.g.dashboard_preview_file_width = 80
 
-vim.cmd(":Codi lua")
+require'terminal'.setup()
 
--- require('lualine').setup{
---	options = {
---  		section_separators = {'', ''},
---  		component_separators = {'', ''}
---	}
---}
+require("lsp-colors").setup({
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
+})
 
+require'bufferline'.setup{
+  options = {
+    view = "multiwindow",
+    numbers = "none",
+    number_style = "superscript", -- buffer_id at index 1, ordinal at index 2
+    mappings = true,
+    buffer_close_icon= '',
+    modified_icon = '●',
+    close_icon = '',
+    left_trunc_marker = '',
+    right_trunc_marker = '',
+    max_name_length = 18,
+    max_prefix_length = 15, -- prefix used when a buffer is deduplicated
+    tab_size = 18,
+    diagnostics = "nvim_lsp"
+   }
+}
 
+-- require('feline').setup()
+require("lsp")
+require'lsp_signature'.on_attach()
